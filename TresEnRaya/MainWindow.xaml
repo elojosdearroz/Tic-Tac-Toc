@@ -116,11 +116,13 @@ Title="Tres en Raya" Height="650" Width="500"
                     <RadioButton x:Name="VsMachineRadio" 
                                Content="🤖 vs Máquina" 
                                Style="{StaticResource ModeRadioStyle}"
+                               Checked="vsMaquina_Click"
                                />
 
                     <RadioButton x:Name="VsPlayerRadio" 
                                Content="👥 vs Jugador" 
                                Style="{StaticResource ModeRadioStyle}"
+                                 Checked="vsJugador_Click"
                                />
                 </StackPanel>
 
@@ -132,12 +134,12 @@ Title="Tres en Raya" Height="650" Width="500"
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button x:Name="HostButton" 
                                Content="🏠 Crear" 
-                               Style="{StaticResource ControlButtonStyle}"
+                               Style="{StaticResource ControlButtonStyle}" Click="HostButton_Click"
                                />
 
                         <Button x:Name="JoinButton" 
                                Content="🔗 Unirse" 
-                               Style="{StaticResource ControlButtonStyle}"
+                               Style="{StaticResource ControlButtonStyle}" Click="JoinButton_Click"
                                />
                     </StackPanel>
 
@@ -241,10 +243,10 @@ Title="Tres en Raya" Height="650" Width="500"
         <Border Grid.Row="4" Background="#F8F9FA" Padding="15">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button x:Name="NewGameButton" 
-                       Content="🎮 Nuevo Juego" 
-                       Style="{StaticResource ControlButtonStyle}"
-                       Background="#28A745"
-                       />
+                        Content="🎮 Nuevo Juego" 
+                        Style="{StaticResource ControlButtonStyle}"
+                        Background="#28A745"
+                        Click="NewGameButton_Click" />
             </StackPanel>
         </Border>
     </Grid>

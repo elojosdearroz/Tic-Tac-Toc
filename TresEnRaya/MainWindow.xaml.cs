@@ -23,25 +23,48 @@ namespace TresEnRaya
         private string[,] board = new string[3, 3];
         private bool isXTurn = true;
         private GameClient _gameClient;
-        private int _playerId; // Puedes usar 1 o 2 para identificar jugador
+        private int _playerId;
         private bool _isMyTurn = false;
+        private string modoJuego = ""; // Por defecto, modo jugador vs jugador
 
         public MainWindow()
         {
             InitializeComponent();
             InicializarJuego();
 
+
+        }
+
+        public void IniciarJuegoEnLinea(int _idPlayer)
+        {
             _gameClient = new GameClient();
             _gameClient.OnMessageReceived += GameClient_OnMessageReceived;
 
-            // Conectarse al servidor (ip y puerto deben ser los correctos)
-            _gameClient.Connect("200.0.0.126", 1234);
 
+            _gameClient.Connect("200.0.0.126", 1234); // Cambia la IP y el puerto según tu configuración del servidor
+            _playerId = _idPlayer;
             // Aquí define el jugador y si empieza primero o segundo
-
             _isMyTurn = (_playerId == 1);
             StatusText.Text = _isMyTurn ? "Tu turno (X)" : "Esperando turno del oponente...";
         }
+
+        //Elegimos el modo de juego
+        private void vsMaquina_Click(object sender, RoutedEventArgs e)
+        {
+            modoJuego = "vsMaquina";
+           VsPlayerRadio.Visibility = Visibility.Collapsed; // Ocultar botones de modo de juego
+        }
+
+        private void vsJugador_Click(object sender, RoutedEventArgs e)
+        {
+            modoJuego = "vsJugador";
+            VsMachineRadio.Visibility = Visibility.Collapsed; // Ocultar botones de modo de juego
+            NetworkPanel.Visibility = Visibility.Visible; // Mostrar panel de red para jugador vs jugador
+
+
+        }
+
+
 
         private void InicializarJuego()
         {
@@ -197,5 +220,21 @@ namespace TresEnRaya
         }
         #endregion
 
+        private void NewGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Por implementar: Reiniciar el juego y enviar mensaje al servidor
+        }
+
+        private void HostButton_Click(object sender, RoutedEventArgs e)
+        {
+            IniciarJuegoEnLinea(1);
+            JoinButton.IsEnabled = false;
+        }
+
+        private void JoinButton_Click(object sender, RoutedEventArgs e)
+        {
+            IniciarJuegoEnLinea(2);
+            HostButton.IsEnabled = false;
+        }
     }
 }
