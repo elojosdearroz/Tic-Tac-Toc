@@ -129,7 +129,7 @@ Title="Tres en Raya" Height="650" Width="500"
                 <!-- Panel de Red (Esta wea solo aparece cuando se le da al coso de jugador haganlo posible) -->
                 <StackPanel x:Name="NetworkPanel" 
                            HorizontalAlignment="Center"
-                           Visibility="Visible"
+                           Visibility="Collapsed"
                            Margin="0,10,0,0">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button x:Name="HostButton" 
