@@ -1,0 +1,31 @@
+C:\Users\LENOVO\UNIVALLE\Tercer Semestre\Programacion III\Unidad IV\TresEnRayau\TresEnRaya\TresEnRaya\obj\Debug\TresEnRaya.csproj.AssemblyReference.cache
+C:\Users\LENOVO\UNIVALLE\Tercer Semestre\Programacion III\Unidad IV\TresEnRayau\TresEnRaya\TresEnRaya\obj\Debug\MainWindow.g.cs
+C:\Users\LENOVO\UNIVALLE\Tercer Semestre\Programacion III\Unidad IV\TresEnRayau\TresEnRaya\TresEnRaya\obj\Debug\App.g.cs
+C:\Users\LENOVO\UNIVALLE\Tercer Semestre\Programacion III\Unidad IV\TresEnRayau\TresEnRaya\TresEnRaya\obj\Debug\TresEnRaya_MarkupCompile.cache
+C:\Users\LENOVO\UNIVALLE\Tercer Semestre\Programacion III\Unidad IV\TresEnRayau\TresEnRaya\TresEnRaya\obj\Debug\TresEnRaya_MarkupCompile.lref
+C:\Users\LENOVO\UNIVALLE\Tercer Semestre\Programacion III\Unidad IV\TresEnRayau\TresEnRaya\TresEnRaya\bin\Debug\TresEnRaya.exe.config
+C:\Users\LENOVO\UNIVALLE\Tercer Semestre\Programacion III\Unidad IV\TresEnRayau\TresEnRaya\TresEnRaya\bin\Debug\TresEnRaya.exe
+C:\Users\LENOVO\UNIVALLE\Tercer Semestre\Programacion III\Unidad IV\TresEnRayau\TresEnRaya\TresEnRaya\bin\Debug\TresEnRaya.pdb
+C:\Users\LENOVO\UNIVALLE\Tercer Semestre\Programacion III\Unidad IV\TresEnRayau\TresEnRaya\TresEnRaya\obj\Debug\MainWindow.baml
+C:\Users\LENOVO\UNIVALLE\Tercer Semestre\Programacion III\Unidad IV\TresEnRayau\TresEnRaya\TresEnRaya\obj\Debug\TresEnRaya.g.resources
+C:\Users\LENOVO\UNIVALLE\Tercer Semestre\Programacion III\Unidad IV\TresEnRayau\TresEnRaya\TresEnRaya\obj\Debug\TresEnRaya.Properties.Resources.resources
+C:\Users\LENOVO\UNIVALLE\Tercer Semestre\Programacion III\Unidad IV\TresEnRayau\TresEnRaya\TresEnRaya\obj\Debug\TresEnRaya.csproj.GenerateResource.cache
+C:\Users\LENOVO\UNIVALLE\Tercer Semestre\Programacion III\Unidad IV\TresEnRayau\TresEnRaya\TresEnRaya\obj\Debug\TresEnRaya.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\UNIVALLE\Tercer Semestre\Programacion III\Unidad IV\TresEnRayau\TresEnRaya\TresEnRaya\obj\Debug\TresEnRaya.exe
+C:\Users\LENOVO\UNIVALLE\Tercer Semestre\Programacion III\Unidad IV\TresEnRayau\TresEnRaya\TresEnRaya\obj\Debug\TresEnRaya.pdb
+C:\Users\nacho\Desktop\TresEnRaya\TresEnRaya\bin\Debug\TresEnRaya.exe.config
+C:\Users\nacho\Desktop\TresEnRaya\TresEnRaya\bin\Debug\TresEnRaya.exe
+C:\Users\nacho\Desktop\TresEnRaya\TresEnRaya\bin\Debug\TresEnRaya.pdb
+C:\Users\nacho\Desktop\TresEnRaya\TresEnRaya\obj\Debug\TresEnRaya.csproj.AssemblyReference.cache
+C:\Users\nacho\Desktop\TresEnRaya\TresEnRaya\obj\Debug\MainWindow.g.cs
+C:\Users\nacho\Desktop\TresEnRaya\TresEnRaya\obj\Debug\App.g.cs
+C:\Users\nacho\Desktop\TresEnRaya\TresEnRaya\obj\Debug\TresEnRaya_MarkupCompile.cache
+C:\Users\nacho\Desktop\TresEnRaya\TresEnRaya\obj\Debug\TresEnRaya_MarkupCompile.lref
+C:\Users\nacho\Desktop\TresEnRaya\TresEnRaya\obj\Debug\MainWindow.baml
+C:\Users\nacho\Desktop\TresEnRaya\TresEnRaya\obj\Debug\TresEnRaya.g.resources
+C:\Users\nacho\Desktop\TresEnRaya\TresEnRaya\obj\Debug\TresEnRaya.Properties.Resources.resources
+C:\Users\nacho\Desktop\TresEnRaya\TresEnRaya\obj\Debug\TresEnRaya.csproj.GenerateResource.cache
+C:\Users\nacho\Desktop\TresEnRaya\TresEnRaya\obj\Debug\TresEnRaya.csproj.CoreCompileInputs.cache
+C:\Users\nacho\Desktop\TresEnRaya\TresEnRaya\obj\Debug\TresEnRaya.exe
+C:\Users\nacho\Desktop\TresEnRaya\TresEnRaya\obj\Debug\TresEnRaya.pdb
+C:\Users\nacho\Desktop\TresEnRaya\TresEnRaya\obj\Debug\TresEnRaya.exe.config
