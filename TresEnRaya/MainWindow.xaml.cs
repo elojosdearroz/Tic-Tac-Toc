@@ -35,10 +35,9 @@ namespace TresEnRaya
             _gameClient.OnMessageReceived += GameClient_OnMessageReceived;
 
             // Conectarse al servidor (ip y puerto deben ser los correctos)
-            _gameClient.Connect("127.0.0.1", 12345);
+            _gameClient.Connect("200.0.0.126", 1234);
 
             // Aquí define el jugador y si empieza primero o segundo
-            _playerId = 1; // o 2 según el servidor
             _isMyTurn = (_playerId == 1);
             StatusText.Text = _isMyTurn ? "Tu turno (X)" : "Esperando turno del oponente...";
         }
@@ -81,7 +80,6 @@ namespace TresEnRaya
         }
         private void GameClient_OnMessageReceived(string message)
         {
-            // Este evento ocurre en un hilo diferente, para actualizar UI usa Dispatcher
             Application.Current.Dispatcher.Invoke(() =>
             {
                 var parts = message.Split('|');
