@@ -106,15 +106,7 @@ namespace TresEnRaya
         {
             Application.Current.Dispatcher.Invoke(() =>
             {
-                var parts = message.Split('|');
-
-                if (parts[0] == "CONNECT")
-                {
-                    _playerId = int.Parse(parts[1]);
-                    _isMyTurn = (_playerId == 1); // Jugador 1 empieza
-                    StatusText.Text = _isMyTurn ? "Tu turno (X)" : "Esperando turno del oponente...";
-                    return;
-                }
+                var parts = message.Split('|');            
 
                 if (parts.Length == 4 && parts[0] == "play")
                 {
