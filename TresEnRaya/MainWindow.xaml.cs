@@ -46,6 +46,7 @@ namespace TresEnRaya
         {
             board = new string[3, 3];
             isXTurn = true;
+            _playerId = 1; // Asignar ID del jugador (1 o 2)
             StatusText.Text = "¡Empieza jugando! Tu turno (X)";
             LimpiarBotones();
         }
@@ -95,17 +96,13 @@ namespace TresEnRaya
                     board[fila, columna] = jugador;
 
                     // Actualiza el botón correspondiente
-                    foreach (var child in GameBoard.Children)
+                    foreach (var btn in FindVisualChildren<Button>(GameBoard))
                     {
-                        if (child is Button btn && btn.Tag != null)
+                        if (btn.Tag != null && btn.Tag.ToString() == $"{fila},{columna}")
                         {
-                            var coords = btn.Tag.ToString();
-                            if (coords == $"{fila},{columna}")
-                            {
-                                btn.Content = jugador;
-                                btn.IsEnabled = false;
-                                break;
-                            }
+                            btn.Content = jugador;
+                            btn.IsEnabled = false;
+                            break;
                         }
                     }
 
