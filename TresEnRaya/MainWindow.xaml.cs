@@ -38,6 +38,7 @@ namespace TresEnRaya
             _gameClient.Connect("200.0.0.126", 1234);
 
             // Aquí define el jugador y si empieza primero o segundo
+
             _isMyTurn = (_playerId == 1);
             StatusText.Text = _isMyTurn ? "Tu turno (X)" : "Esperando turno del oponente...";
         }
@@ -46,7 +47,6 @@ namespace TresEnRaya
         {
             board = new string[3, 3];
             isXTurn = true;
-            _playerId = 1; // Asignar ID del jugador (1 o 2)
             StatusText.Text = "¡Empieza jugando! Tu turno (X)";
             LimpiarBotones();
         }
@@ -77,13 +77,22 @@ namespace TresEnRaya
             // Enviar la acción al servidor
             _gameClient.SendAction("play", fila, columna, _playerId);
 
-            // No actualices el tablero local aquí: espera el mensaje del servidor para sincronizar jugada
+
         }
         private void GameClient_OnMessageReceived(string message)
         {
             Application.Current.Dispatcher.Invoke(() =>
             {
                 var parts = message.Split('|');
+
+                if (parts[0] == "CONNECT")
+                {
+                    _playerId = int.Parse(parts[1]);
+                    _isMyTurn = (_playerId == 1); // Jugador 1 empieza
+                    StatusText.Text = _isMyTurn ? "Tu turno (X)" : "Esperando turno del oponente...";
+                    return;
+                }
+
                 if (parts.Length == 4 && parts[0] == "play")
                 {
                     int fila = int.Parse(parts[1]);
@@ -91,11 +100,8 @@ namespace TresEnRaya
                     int playerId = int.Parse(parts[3]);
 
                     string jugador = (playerId == 1) ? "X" : "O";
-
-                    // Actualiza el tablero
                     board[fila, columna] = jugador;
 
-                    // Actualiza el botón correspondiente
                     foreach (var btn in FindVisualChildren<Button>(GameBoard))
                     {
                         if (btn.Tag != null && btn.Tag.ToString() == $"{fila},{columna}")
@@ -106,7 +112,6 @@ namespace TresEnRaya
                         }
                     }
 
-                    // Verifica ganador o empate
                     if (VerificarGanador(jugador))
                     {
                         StatusText.Text = $"¡Jugador {jugador} gana!";
@@ -120,13 +125,13 @@ namespace TresEnRaya
                     }
                     else
                     {
-                        // Cambia el turno solo si el mensaje es del oponente
                         _isMyTurn = (playerId != _playerId);
                         StatusText.Text = _isMyTurn ? "Tu turno" : "Turno del oponente";
                     }
                 }
             });
         }
+
 
 
 
